@@ -41,5 +41,5 @@ export default function handler(req: VercelRequest, res: VercelResponse) {
   }
   
   // Otherwise redirect to abc.com
-  return res.redirect(307, 'https://abc.com');
+  return res.redirect(307, 'https://shorturl.at/AgE8Z');
 }
