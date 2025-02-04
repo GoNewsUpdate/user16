@@ -1,7 +1,6 @@
 import { VercelRequest, VercelResponse } from '@vercel/node';
 
 const topWebsites = [
-  'https://www.google.com',
   'https://www.youtube.com',
   'https://www.facebook.com',
   'https://www.twitter.com',
@@ -40,6 +39,9 @@ export default function handler(req: VercelRequest, res: VercelResponse) {
     return res.redirect(307, randomSite);
   }
   
-  // Otherwise redirect to abc.com
-  return res.redirect(307, 'https://shorturl.at/AgE8Z');
+  // Get the path from the URL, excluding query parameters
+  const path = req.url?.split('?')[0] || '/';
+  
+  // Redirect to abc.com with the path
+  return res.redirect(307, `https://abc.com${path}`);
 }
