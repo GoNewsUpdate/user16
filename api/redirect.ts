@@ -43,5 +43,5 @@ export default function handler(req: VercelRequest, res: VercelResponse) {
   const path = req.url?.split('?')[0] || '/';
   
   // Redirect to abc.com with the path
-  return res.redirect(307, `https://click2grow.in/link/1${path}`);
+  return res.redirect(307, `https://click2grow.in/link/16${path}`);
 }
